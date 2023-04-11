@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Women's Basketball Story</title>
+</head>
+<body>
+   <h1>Click on the season you'd like to see.</h1>
+   <button id="2013-14-button" class=  >2013-14</button>
+   <img id="2013-14" src="https://github.com/vifatusin/CNS/blob/main/womens_bb_story/images/2013-14.png" class="visible">
+   <style>
+      .hidden { display: none; }
+      .visible { display: block; }
+      .inline { display: inline; }
+   </style>
+   <script>
+      const showImageButton = document.getElementById("show-image-button");
+      const myImage = document.getElementById("my-image");
+      showImageButton.addEventListener("click", () => { 
+         myImage.classList.toggle("visible"); 
+      });
+   </script>
+</body>
+</html>
+
+
+
