@@ -1,26 +1,205 @@
-<!DOCTYPE html>
 <html>
 <head>
-   <title>Women's Basketball Story</title>
+   
+<!-- Jquery call -->
+<script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+
+<!-- Since we'll be starting with the cat image, this is saying, don't show the others -->
+<style>
+   img {width: 825px;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;}
+
+
+      @font-face {
+            font-family: dincondensed-bold;
+            src: url('DINCondensed-Bold.ttf');
+      }
+
+      .button {
+            background-color: #4CAF50; /* Green */
+            border-radius: 12px;
+            border: none;            
+            color: white;
+            padding: 8px 16px;
+            font-family: dincondensed-bold;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+      }
+
+      .buttonDesign {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #000000;
+      }
+
+      .buttonDesign:hover {
+            background-color: #E21933; 
+            color: white;
+      }
+
+      #season-2014-15-image, #season-2015-16-image, #season-2016-17-image, #season-2017-18-image, #season-2018-19-image, #season-2019-20-image, #season-2021-22-image, #season-2022-23-image {
+      display:none;
+   }
+
+   #button-container {
+      width:100%;
+      text-align: center;
+   }
+</style>
+
 </head>
+
+<!-- Creating element to show and hide certain images -->
+<div id="content-box">
+      <img src="images/2013-14.png" id="season-2013-14-image"> 
+      <img src="images/2014-15.png" id="season-2014-15-image">
+      <img src="images/2015-16.png" id="season-2015-16-image">
+      <img src="images/2016-17.png" id="season-2016-17-image">
+      <img src="images/2017-18.png" id="season-2017-18-image">
+      <img src="images/2018-19.png" id="season-2018-19-image">
+      <img src="images/2019-20.png" id="season-2019-20-image">
+      <img src="images/2021-22.png" id="season-2021-22-image">
+      <img src="images/2022-23.png" id="season-2022-23-image">
+</div>
+
 <body>
-   <h1>Click on the season you'd like to see.</h1>
-   <button id="2013-14-button" class=  >2013-14</button>
-   <img id="2013-14" src="https://github.com/vifatusin/CNS/blob/main/womens_bb_story/images/2013-14.png" class="visible">
-   <style>
-      .hidden { display: none; }
-      .visible { display: block; }
-      .inline { display: inline; }
-   </style>
+
+<!-- show hide trigger element. Could be anything-->
+<div id="button-container">
+<button class = "button buttonDesign" href="#" id="season-2013-14-button">Season 2013-14</button>
+<button class = "button buttonDesign" href="#" id="season-2014-15-button">Season 2014-15</button>
+<button class = "button buttonDesign" href="#" id="season-2015-16-button">Season 2015-16</button>
+<button class = "button buttonDesign" href="#" id="season-2016-17-button">Season 2016-17</button>
+<button class = "button buttonDesign" href="#" id="season-2017-18-button">Season 2017-18</button>
+<button class = "button buttonDesign" href="#" id="season-2018-19-button">Season 2018-19</button>
+<button class = "button buttonDesign" href="#" id="season-2019-20-button">Season 2019-20</button>
+<button class = "button buttonDesign" href="#" id="season-2021-22-button">Season 2021-22</button>
+<button class = "button buttonDesign" href="#" id="season-2022-23-button">Season 2022-23</button>
+</div>
+
+
    <script>
-      const showImageButton = document.getElementById("show-image-button");
-      const myImage = document.getElementById("my-image");
-      showImageButton.addEventListener("click", () => { 
-         myImage.classList.toggle("visible"); 
-      });
+      $("#season-2013-14-button").click(function(){
+		$("#season-2013-14-image").show();
+        $("#season-2014-15-image").hide();
+        $("#season-2015-16-image").hide();
+        $("#season-2016-17-image").hide();
+        $("#season-2017-18-image").hide();
+        $("#season-2018-19-image").hide();
+        $("#season-2019-20-image").hide();
+        $("#season-2021-22-image").hide();
+        $("#season-2022-23-image").hide();
+  });
+ 
+  $("#season-2014-15-button").click(function(){
+		$("#season-2014-15-image").show();
+        $("#season-2013-14-image").hide();
+        $("#season-2015-16-image").hide();
+        $("#season-2016-17-image").hide();
+        $("#season-2017-18-image").hide();
+        $("#season-2018-19-image").hide();
+        $("#season-2019-20-image").hide();
+        $("#season-2021-22-image").hide();
+        $("#2season-022-23-image").hide();
+  });
+
+  $("#season-2015-16-button").click(function(){
+		$("#season-2015-16-image").show();
+        $("#season-2013-14-image").hide();
+        $("#season-2014-15-image").hide();
+        $("#season-2016-17-image").hide();
+        $("#season-2017-18-image").hide();
+        $("#season-2018-19-image").hide();
+        $("#season-019-20-image").hide();
+        $("#season-2021-22-image").hide();
+        $("#season-2022-23-image").hide();
+  });
+
+  $("#season-2016-17-button").click(function(){
+		$("#season-2016-17-image").show();
+        $("#season-2013-14-image").hide();
+        $("#season-2014-15-image").hide();
+        $("#season-2015-16-image").hide();
+        $("#season-2017-18-image").hide();
+        $("#season-2018-19-image").hide();
+        $("#season-2019-20-image").hide();
+        $("#season-2021-22-image").hide();
+        $("#season-2022-23-image").hide();
+  });
+
+  $("#season-2017-18-button").click(function(){
+		$("#season-2017-18-image").show();
+        $("#season-2013-14-image").hide();
+        $("#season-2014-15-image").hide();
+        $("#season-2015-16-image").hide();
+        $("#season-2016-17-image").hide();
+        $("#season-2018-19-image").hide();
+        $("#season-2019-20-image").hide();
+        $("#season-2021-22-image").hide();
+        $("#season-2022-23-image").hide();
+  });
+
+  $("#season-2018-19-button").click(function(){
+		$("#season-2018-19-image").show();
+        $("#season-2013-14-image").hide();
+        $("#season-2014-15-image").hide();
+        $("#season-2015-16-image").hide();
+        $("#season-2016-17-image").hide();
+        $("#season-2017-18-image").hide();
+        $("#season-2019-20-image").hide();
+        $("#season-2021-22-image").hide();
+        $("#season-2022-23-image").hide();
+  });
+
+  $("#season-2019-20-button").click(function(){
+		$("#season-2019-20-image").show();
+        $("#season-2013-14-image").hide();
+        $("#season-2014-15-image").hide();
+        $("#season-2015-16-image").hide();
+        $("#season-2016-17-image").hide();
+        $("#season-2017-18-image").hide();
+        $("#season-2018-19-image").hide();
+        $("#season-2021-22-image").hide();
+        $("#season-2022-23-image").hide();
+  });
+
+  $("#season-2021-22-button").click(function(){
+		$("#season-2021-22-image").show();
+        $("#season-2013-14-image").hide();
+        $("#season-2014-15-image").hide();
+        $("#season-2015-16-image").hide();
+        $("#season-2016-17-image").hide();
+        $("#season-2017-18-image").hide();
+        $("#season-2018-19-image").hide();
+        $("#season-2019-20-image").hide();
+        $("#season-2022-23-image").hide();
+  });
+
+  $("#season-2022-23-button").click(function(){
+		$("#season-2022-23-image").show();
+        $("#season-2013-14-image").hide();
+        $("#season-2014-15-image").hide();
+        $("#season-2015-16-image").hide();
+        $("#season-2016-17-image").hide();
+        $("#season-2017-18-image").hide();
+        $("#season-2018-19-image").hide();
+        $("#season-2019-20-image").hide();
+        $("#season-2021-22-image").hide();
+  });
+
    </script>
+
 </body>
 </html>
-
-
-
